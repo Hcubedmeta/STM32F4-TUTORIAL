@@ -1,0 +1,93 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.39.0.0
+Copyright (C) 2023 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: hkjh hk, jh, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.39.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.21
+Assembler:       Armasm.exe V6.21
+Linker/Locator:  ArmLink.exe V6.21
+Library Manager: ArmAr.exe V6.21
+Hex Converter:   FromElf.exe V6.21
+CPU DLL:         SARMCM3.DLL V5.39.0.0
+Dialog DLL:      DCM.DLL V1.17.5.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.2.0.0
+Dialog DLL:      TCM.DLL V1.56.4.0
+ 
+<h2>Project:</h2>
+C:\Users\Hoang\Documents\embedded code\code stm32\STM32F4\LED_BLINK\LED_BLINK.uvprojx
+Project File Date:  02/21/2025
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.21', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
+Build target 'Target 1'
+main.c(5): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    5 | Muon bat (1 bit cu the len 1) : D<F9>ng |=
+      |                                  ^
+main.c(6): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    6 | Muon tat (x<F3>a bit ve 0) : D<F9>ng &= ~
+      |            ^
+main.c(6): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    6 | Muon tat (x<F3>a bit ve 0) : D<F9>ng &= ~
+      |                               ^
+main.c(32): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+   32 |         GPIOC->MODER &= ~(3<<(13*2)); // delete 2 bit 26,27 cua pc13 ve 0, 3 = 0b11 = (0xFFFF FF11 FFFF FFFF FFFF FFFF FFFF FFFF)
+      |                      ~~ ^~~~~~~~~~~~
+main.c(34): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+   34 |         GPIOC->OTYPER &= ~(1 << 13); // xoa bit chan 13 ve 0 tuc la mode ouput push-pull
+      |                       ~~ ^~~~~~~~~~
+main.c(36): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+   36 |         GPIOC->PUPDR &= ~(3 << (13*2)); // no pull-up/pull-down
+      |                      ~~ ^~~~~~~~~~~~~~
+main.c(40): warning: operator '<<' has lower precedence than '+'; '+' will be evaluated first [-Wshift-op-parentheses]
+   40 |                 GPIOC->BSRR = (1<<13 + 16);
+      |                                 ~~~~~^~~~
+main.c(40): note: place parentheses around the '+' expression to silence this warning
+   40 |                 GPIOC->BSRR = (1<<13 + 16);
+      |                                      ^   
+      |                                   (      )
+7 warnings generated.
+compiling main.c...
+linking...
+Program Size: Code=612 RO-data=424 RW-data=0 ZI-data=1632  
+".\Objects\LED_BLINK.axf" - 0 Error(s), 7 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.9.0.pack
+                ARM::CMSIS@5.9.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.6.0
+
+Package Vendor: Keil
+                https://www.keil.com/pack/Keil.STM32F4xx_DFP.2.17.1.pack
+                Keil::STM32F4xx_DFP@2.17.1
+                STMicroelectronics STM32F4 Series Device Support, Drivers and Examples
+   * Component: Startup Version: 2.6.3
+
+<h2>Collection of Component include folders:</h2>
+  ./RTE/_Target_1
+  C:/Users/Hoang/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include
+  C:/Users/Hoang/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.17.1/Drivers/CMSIS/Device/ST/STM32F4xx/Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE@5.6.0
+
+   * Component: Keil::Device:Startup@2.6.3
+      Source file:   MDK/Device/Source/ARM/STM32F411xx_OPT.s
+      Include file:  Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h
+      Source file:   MDK/Device/Source/ARM/STM32F4xx_OTP.s
+      Source file:   Drivers/CMSIS/Device/ST/STM32F4xx/Source/Templates/arm/startup_stm32f411xe.s
+      Source file:   Drivers/CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.c
+Build Time Elapsed:  00:00:01
+</pre>
+</body>
+</html>
