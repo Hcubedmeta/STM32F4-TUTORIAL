@@ -1,0 +1,469 @@
+<html>
+<body>
+<pre>
+<h1>�Vision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: �Vision V5.39.0.0
+Copyright (C) 2023 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: hkjh hk, jh, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.39.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.21
+Assembler:       Armasm.exe V6.21
+Linker/Locator:  ArmLink.exe V6.21
+Library Manager: ArmAr.exe V6.21
+Hex Converter:   FromElf.exe V6.21
+CPU DLL:         SARMCM3.DLL V5.39.0.0
+Dialog DLL:      DCM.DLL V1.17.5.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.2.0.0
+Dialog DLL:      TCM.DLL V1.56.4.0
+ 
+<h2>Project:</h2>
+C:\Users\Hoang\Documents\embedded code\code stm32\STM32F4\Game_Device\game.uvprojx
+Project File Date:  03/09/2025
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.21', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
+Rebuild target 'Target 1'
+assembling startup_stm32f411xe.s...
+RTE/Device/STM32F411CEUx/system_stm32f4xx.c(263): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  263 |   tmp = AHBPrescTable[((RCC->CFGR & RCC_CFGR_HPRE) >> 4)];
+      |         ^~~~~~~~~~~~~
+1 warning generated.
+compiling system_stm32f4xx.c...
+main.c(2): warning: In file included from...
+../H_lib/SPI\H_SPI.h(3): warning: In file included from...
+../H_lib/ILI9225\ILI9225.h(159): warning: extra ';' outside of a function [-Wextra-semi]
+  159 |     void blink_star_edges(int centerX, int centerY, int radius, int starColor, int bgColor, int Delay_ms);;
+      |                                                                                                           ^
+main.c(24): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   24 |                 // Chuy?n d?i ADC th<E0>nh t?a d? m<E0>n h<EC>nh
+      |                                     ^
+main.c(24): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   24 |                 // Chuy?n d?i ADC th<E0>nh t?a d? m<E0>n h<EC>nh
+      |                                                    ^
+main.c(24): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   24 |                 // Chuy?n d?i ADC th<E0>nh t?a d? m<E0>n h<EC>nh
+      |                                                           ^
+main.c(28): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   28 |                 // Gi?i h?n gi<E1> tr? x, y trong m<E0>n h<EC>nh
+      |                               ^
+main.c(28): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   28 |                 // Gi?i h?n gi<E1> tr? x, y trong m<E0>n h<EC>nh
+      |                                                    ^
+main.c(28): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   28 |                 // Gi?i h?n gi<E1> tr? x, y trong m<E0>n h<EC>nh
+      |                                                           ^
+main.c(35): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   35 |                 // X<F3>a con tr? cu d<FA>ng c<E1>ch
+      |                     ^
+main.c(35): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   35 |                 // X<F3>a con tr? cu d<FA>ng c<E1>ch
+      |                                       ^
+main.c(35): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   35 |                 // X<F3>a con tr? cu d<FA>ng c<E1>ch
+      |                                               ^
+main.c(42): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   42 |                 // C?p nh?t v? tr<ED> m?i
+      |                                  ^
+main.c(74): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   74 |     // Ch?n k<EA>nh ADC
+      |              ^
+main.c(80): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   80 |     // Ch? chuy?n d?i ho<E0>n t?t
+      |                         ^
+main.c(83): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   83 |     return (uint16_t)ADC1->DR;  // Tr? v? gi<E1> tr? ADC
+      |                                             ^
+main.c(90): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+   90 |     return (uint16_t)sum / 18;  // L?y trung b<EC>nh 10 l?n d?c
+      |                                               ^
+15 warnings generated.
+compiling main.c...
+compiling H_gpio.c...
+../H_lib/SPI/H_SPI.c(1): warning: In file included from...
+../H_lib/SPI/H_SPI.h(3): warning: In file included from...
+../H_lib/ILI9225\ILI9225.h(159): warning: extra ';' outside of a function [-Wextra-semi]
+  159 |     void blink_star_edges(int centerX, int centerY, int radius, int starColor, int bgColor, int Delay_ms);;
+      |                                                                                                           ^
+../H_lib/SPI/H_SPI.c(25): warning: signed shift result (0xC0000000) sets the sign bit of the shift expression's type ('int') and becomes negative [-Wshift-sign-overflow]
+   25 |                 GPIOB->MODER &= ~(unsigned int)(3 << (13 * 2) | 3 << (15 * 2));
+      |                                                                 ~ ^  ~~~~~~~~
+../H_lib/SPI/H_SPI.c(26): warning: signed shift result (0x80000000) sets the sign bit of the shift expression's type ('int') and becomes negative [-Wshift-sign-overflow]
+   26 |                 GPIOB->MODER |= (unsigned int)(2 << (13 * 2) | 2 << (15 * 2));
+      |                                                                ~ ^  ~~~~~~~~
+../H_lib/SPI/H_SPI.c(30): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   30 |                 GPIOB->AFR[1] |= (5 << 20 | 5 << 28);
+      |                 ^~~~~~~~~~
+C:/Users/Hoang/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.17.1/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f411xe.h(783): note: expanded from macro 'GPIOB'
+  783 | #define GPIOB               ((GPIO_TypeDef *) GPIOB_BASE)
+      |                             ^
+../H_lib/SPI/H_SPI.c(68): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   68 |                 while(arr[i])
+      |                       ^~~
+../H_lib/SPI/H_SPI.c(70): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   70 |                         SPI1->DR |= arr[i];
+      |                                     ^~~
+../H_lib/SPI/H_SPI.c(77): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   77 |                 while(arr[i])
+      |                       ^~~
+../H_lib/SPI/H_SPI.c(79): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+   79 |                         SPI2->DR |= arr[i];
+      |                                     ^~~
+8 warnings generated.
+compiling H_SPI.c...
+../H_lib/ILI9225/ILI9225.c(2): warning: In file included from...
+../H_lib/ILI9225/ILI9225.h(159): warning: extra ';' outside of a function [-Wextra-semi]
+  159 |     void blink_star_edges(int centerX, int centerY, int radius, int starColor, int bgColor, int Delay_ms);;
+      |                                                                                                           ^
+../H_lib/ILI9225/ILI9225.c(7): warning: no previous extern declaration for non-static variable 'FontLarge' [-Wmissing-variable-declarations]
+    7 |     const unsigned char FontLarge[95][13] = {
+      |                         ^
+../H_lib/ILI9225/ILI9225.c(7): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+    7 |     const unsigned char FontLarge[95][13] = {
+      |           ^
+../H_lib/ILI9225/ILI9225.c(159): warning: implicit conversion loses integer precision: 'unsigned int' to 'unsigned char' [-Wimplicit-int-conversion]
+  159 |     lcd_write_command(reg >> 8); //regH
+      |     ~~~~~~~~~~~~~~~~~ ~~~~^~~~
+../H_lib/ILI9225/ILI9225.c(161): warning: implicit conversion loses integer precision: 'unsigned int' to 'unsigned char' [-Wimplicit-int-conversion]
+  161 |     lcd_write_data(data >> 8); //dataH
+      |     ~~~~~~~~~~~~~~ ~~~~~^~~~
+../H_lib/ILI9225/ILI9225.c(191): warning: implicit conversion turns floating-point number into integer: 'double' to '_Bool' [-Wfloat-conversion]
+  191 |         while(counter--);
+      |         ~~~~~ ~~~~~~~^~
+../H_lib/ILI9225/ILI9225.c(209): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+  209 | void lcd_init() {
+      |              ^
+      |               void
+../H_lib/ILI9225/ILI9225.c(316): warning: implicit conversion loses integer precision: 'unsigned int' to 'unsigned char' [-Wimplicit-int-conversion]
+  316 |     lcd_write_data(colour >> 8);
+      |     ~~~~~~~~~~~~~~ ~~~~~~~^~~~
+../H_lib/ILI9225/ILI9225.c(334): warning: mixing declarations and code is incompatible with standards before C99 [-Wdeclaration-after-statement]
+  334 |     unsigned char colour_high = (unsigned char)colour >> 8;
+      |                   ^
+../H_lib/ILI9225/ILI9225.c(412): warning: implicit conversion loses integer precision: 'int' to 'char' [-Wimplicit-int-conversion]
+  412 |                     fill_rectangle(x+(char)((8-j)*size), y+(char)((i)*size), x+((8-j)*size)+(char)size, y+((i)*size)+(char)size, colour);
+      |                     ~~~~~~~~~~~~~~                                                                      ~~~~~~~~~~~~^~~~~~~~~~~
+../H_lib/ILI9225/ILI9225.c(412): warning: implicit conversion loses integer precision: 'int' to 'char' [-Wimplicit-int-conversion]
+  412 |                     fill_rectangle(x+(char)((8-j)*size), y+(char)((i)*size), x+((8-j)*size)+(char)size, y+((i)*size)+(char)size, colour);
+      |                     ~~~~~~~~~~~~~~                                           ~~~~~~~~~~~~~~^~~~~~~~~~~
+../H_lib/ILI9225/ILI9225.c(469): warning: implicit conversion loses integer precision: 'unsigned int' to 'unsigned char' [-Wimplicit-int-conversion]
+  469 |             lcd_write_data(this_px >> 8);
+      |             ~~~~~~~~~~~~~~ ~~~~~~~~^~~~
+../H_lib/ILI9225/ILI9225.c(494): warning: implicit conversion loses integer precision: 'int' to 'char' [-Wimplicit-int-conversion]
+  494 |         draw_char(char_pos, y, str[counter], colour, size);
+      |         ~~~~~~~~~ ^~~~~~~~
+../H_lib/ILI9225/ILI9225.c(511): warning: implicit conversion loses integer precision: 'int' to 'char' [-Wimplicit-int-conversion]
+  511 |         draw_fast_char(x + (counter * 9), y, str[counter], colour, bg_colour);
+      |         ~~~~~~~~~~~~~~ ~~^~~~~~~~~~~~~~~
+../H_lib/ILI9225/ILI9225.c(524): warning: implicit conversion changes signedness: 'const unsigned int' to 'int' [-Wsign-conversion]
+  524 |         int width = bmp[0];
+      |             ~~~~~   ^~~~~~
+../H_lib/ILI9225/ILI9225.c(525): warning: implicit conversion changes signedness: 'const unsigned int' to 'int' [-Wsign-conversion]
+  525 |         int height = bmp[1];
+      |             ~~~~~~   ^~~~~~
+../H_lib/ILI9225/ILI9225.c(532): warning: incompatible pointer types passing 'int *' to parameter of type 'char *' [-Wincompatible-pointer-types]
+  532 |                 swap_char(&x1, &y1);
+      |                           ^~~
+../H_lib/ILI9225/ILI9225.c(177): note: passing argument to parameter 'num1' here
+  177 | void swap_char(char *num1, char *num2) {
+      |                      ^
+../H_lib/ILI9225/ILI9225.c(532): warning: incompatible pointer types passing 'int *' to parameter of type 'char *' [-Wincompatible-pointer-types]
+  532 |                 swap_char(&x1, &y1);
+      |                                ^~~
+../H_lib/ILI9225/ILI9225.c(177): note: passing argument to parameter 'num2' here
+  177 | void swap_char(char *num1, char *num2) {
+      |                                  ^
+../H_lib/ILI9225/ILI9225.c(533): warning: incompatible pointer types passing 'int *' to parameter of type 'char *' [-Wincompatible-pointer-types]
+  533 |                 swap_char(&x2, &y2);
+      |                           ^~~
+../H_lib/ILI9225/ILI9225.c(177): note: passing argument to parameter 'num1' here
+  177 | void swap_char(char *num1, char *num2) {
+      |                      ^
+../H_lib/ILI9225/ILI9225.c(533): warning: incompatible pointer types passing 'int *' to parameter of type 'char *' [-Wincompatible-pointer-types]
+  533 |                 swap_char(&x2, &y2);
+      |                                ^~~
+../H_lib/ILI9225/ILI9225.c(177): note: passing argument to parameter 'num2' here
+  177 | void swap_char(char *num1, char *num2) {
+      |                                  ^
+../H_lib/ILI9225/ILI9225.c(536): warning: incompatible pointer types passing 'int *' to parameter of type 'char *' [-Wincompatible-pointer-types]
+  536 |                 swap_char(&y2, &y1);
+      |                           ^~~
+../H_lib/ILI9225/ILI9225.c(177): note: passing argument to parameter 'num1' here
+  177 | void swap_char(char *num1, char *num2) {
+      |                      ^
+../H_lib/ILI9225/ILI9225.c(536): warning: incompatible pointer types passing 'int *' to parameter of type 'char *' [-Wincompatible-pointer-types]
+  536 |                 swap_char(&y2, &y1);
+      |                                ^~~
+../H_lib/ILI9225/ILI9225.c(177): note: passing argument to parameter 'num2' here
+  177 | void swap_char(char *num1, char *num2) {
+      |                                  ^
+../H_lib/ILI9225/ILI9225.c(542): warning: implicit conversion loses integer precision: 'int' to 'char' [-Wimplicit-int-conversion]
+  542 |         set_draw_window(x1, y1, x2 + scale - 1, y2);
+      |         ~~~~~~~~~~~~~~~                         ^~
+../H_lib/ILI9225/ILI9225.c(542): warning: implicit conversion loses integer precision: 'int' to 'char' [-Wimplicit-int-conversion]
+  542 |         set_draw_window(x1, y1, x2 + scale - 1, y2);
+      |         ~~~~~~~~~~~~~~~         ~~~~~~~~~~~^~~
+../H_lib/ILI9225/ILI9225.c(542): warning: implicit conversion loses integer precision: 'int' to 'char' [-Wimplicit-int-conversion]
+  542 |         set_draw_window(x1, y1, x2 + scale - 1, y2);
+      |         ~~~~~~~~~~~~~~~     ^~
+../H_lib/ILI9225/ILI9225.c(542): warning: implicit conversion loses integer precision: 'int' to 'char' [-Wimplicit-int-conversion]
+  542 |         set_draw_window(x1, y1, x2 + scale - 1, y2);
+      |         ~~~~~~~~~~~~~~~ ^~
+../H_lib/ILI9225/ILI9225.c(563): warning: implicit conversion loses integer precision: 'unsigned int' to 'unsigned char' [-Wimplicit-int-conversion]
+  563 |                                         lcd_write_data(this_byte >> 8);
+      |                                         ~~~~~~~~~~~~~~ ~~~~~~~~~~^~~~
+../H_lib/ILI9225/ILI9225.c(579): warning: implicit conversion loses integer precision: 'int' to 'char' [-Wimplicit-int-conversion]
+  579 |                     draw_pixel(x + t, j, color);
+      |                     ~~~~~~~~~~        ^
+../H_lib/ILI9225/ILI9225.c(579): warning: implicit conversion loses integer precision: 'int' to 'char' [-Wimplicit-int-conversion]
+  579 |                     draw_pixel(x + t, j, color);
+      |                     ~~~~~~~~~~ ~~^~~
+../H_lib/ILI9225/ILI9225.c(581): warning: implicit conversion loses integer precision: 'int' to 'char' [-Wimplicit-int-conversion]
+  581 |                     draw_pixel(x + width - 1 - t, j, color);
+      |                     ~~~~~~~~~~                    ^
+../H_lib/ILI9225/ILI9225.c(581): warning: implicit conversion loses integer precision: 'int' to 'char' [-Wimplicit-int-conversion]
+  581 |                     draw_pixel(x + width - 1 - t, j, color);
+      |                     ~~~~~~~~~~ ~~~~~~~~~~~~~~^~~
+../H_lib/ILI9225/ILI9225.c(585): warning: implicit conversion loses integer precision: 'int' to 'char' [-Wimplicit-int-conversion]
+  585 |                     draw_pixel(i, y + t, color);
+      |                     ~~~~~~~~~~    ~~^~~
+../H_lib/ILI9225/ILI9225.c(585): warning: implicit conversion loses integer precision: 'int' to 'char' [-Wimplicit-int-conversion]
+  585 |                     draw_pixel(i, y + t, color);
+      |                     ~~~~~~~~~~ ^
+../H_lib/ILI9225/ILI9225.c(587): warning: implicit conversion loses integer precision: 'int' to 'char' [-Wimplicit-int-conversion]
+  587 |                     draw_pixel(i, y + height - 1 - t, color);
+      |                     ~~~~~~~~~~    ~~~~~~~~~~~~~~~^~~
+../H_lib/ILI9225/ILI9225.c(587): warning: implicit conversion loses integer precision: 'int' to 'char' [-Wimplicit-int-conversion]
+  587 |                     draw_pixel(i, y + height - 1 - t, color);
+      |                     ~~~~~~~~~~ ^
+../H_lib/ILI9225/ILI9225.c(599): warning: implicit conversion loses integer precision: 'int' to 'char' [-Wimplicit-int-conversion]
+  599 |                 draw_pixel(centerX + x, centerY + y, color);
+      |                 ~~~~~~~~~~              ~~~~~~~~^~~
+../H_lib/ILI9225/ILI9225.c(599): warning: implicit conversion loses integer precision: 'int' to 'char' [-Wimplicit-int-conversion]
+  599 |                 draw_pixel(centerX + x, centerY + y, color);
+      |                 ~~~~~~~~~~ ~~~~~~~~^~~
+../H_lib/ILI9225/ILI9225.c(600): warning: implicit conversion loses integer precision: 'int' to 'char' [-Wimplicit-int-conversion]
+  600 |                 draw_pixel(centerX - x, centerY + y, color);
+      |                 ~~~~~~~~~~              ~~~~~~~~^~~
+../H_lib/ILI9225/ILI9225.c(600): warning: implicit conversion loses integer precision: 'int' to 'char' [-Wimplicit-int-conversion]
+  600 |                 draw_pixel(centerX - x, centerY + y, color);
+      |                 ~~~~~~~~~~ ~~~~~~~~^~~
+../H_lib/ILI9225/ILI9225.c(601): warning: implicit conversion loses integer precision: 'int' to 'char' [-Wimplicit-int-conversion]
+  601 |                 draw_pixel(centerX + x, centerY - y, color);
+      |                 ~~~~~~~~~~              ~~~~~~~~^~~
+../H_lib/ILI9225/ILI9225.c(601): warning: implicit conversion loses integer precision: 'int' to 'char' [-Wimplicit-int-conversion]
+  601 |                 draw_pixel(centerX + x, centerY - y, color);
+      |                 ~~~~~~~~~~ ~~~~~~~~^~~
+../H_lib/ILI9225/ILI9225.c(602): warning: implicit conversion loses integer precision: 'int' to 'char' [-Wimplicit-int-conversion]
+  602 |                 draw_pixel(centerX - x, centerY - y, color);
+      |                 ~~~~~~~~~~              ~~~~~~~~^~~
+../H_lib/ILI9225/ILI9225.c(602): warning: implicit conversion loses integer precision: 'int' to 'char' [-Wimplicit-int-conversion]
+  602 |                 draw_pixel(centerX - x, centerY - y, color);
+      |                 ~~~~~~~~~~ ~~~~~~~~^~~
+../H_lib/ILI9225/ILI9225.c(603): warning: implicit conversion loses integer precision: 'int' to 'char' [-Wimplicit-int-conversion]
+  603 |                 draw_pixel(centerX + y, centerY + x, color);
+      |                 ~~~~~~~~~~              ~~~~~~~~^~~
+../H_lib/ILI9225/ILI9225.c(603): warning: implicit conversion loses integer precision: 'int' to 'char' [-Wimplicit-int-conversion]
+  603 |                 draw_pixel(centerX + y, centerY + x, color);
+      |                 ~~~~~~~~~~ ~~~~~~~~^~~
+../H_lib/ILI9225/ILI9225.c(604): warning: implicit conversion loses integer precision: 'int' to 'char' [-Wimplicit-int-conversion]
+  604 |                 draw_pixel(centerX - y, centerY + x, color);
+      |                 ~~~~~~~~~~              ~~~~~~~~^~~
+../H_lib/ILI9225/ILI9225.c(604): warning: implicit conversion loses integer precision: 'int' to 'char' [-Wimplicit-int-conversion]
+  604 |                 draw_pixel(centerX - y, centerY + x, color);
+      |                 ~~~~~~~~~~ ~~~~~~~~^~~
+../H_lib/ILI9225/ILI9225.c(605): warning: implicit conversion loses integer precision: 'int' to 'char' [-Wimplicit-int-conversion]
+  605 |                 draw_pixel(centerX + y, centerY - x, color);
+      |                 ~~~~~~~~~~              ~~~~~~~~^~~
+../H_lib/ILI9225/ILI9225.c(605): warning: implicit conversion loses integer precision: 'int' to 'char' [-Wimplicit-int-conversion]
+  605 |                 draw_pixel(centerX + y, centerY - x, color);
+      |                 ~~~~~~~~~~ ~~~~~~~~^~~
+../H_lib/ILI9225/ILI9225.c(606): warning: implicit conversion loses integer precision: 'int' to 'char' [-Wimplicit-int-conversion]
+  606 |                 draw_pixel(centerX - y, centerY - x, color);
+      |                 ~~~~~~~~~~              ~~~~~~~~^~~
+../H_lib/ILI9225/ILI9225.c(606): warning: implicit conversion loses integer precision: 'int' to 'char' [-Wimplicit-int-conversion]
+  606 |                 draw_pixel(centerX - y, centerY - x, color);
+      |                 ~~~~~~~~~~ ~~~~~~~~^~~
+../H_lib/ILI9225/ILI9225.c(632): warning: implicit conversion loses integer precision: 'int' to 'char' [-Wimplicit-int-conversion]
+  632 |         draw_pixel(x0, y0, color);  // Vẽ điểm ảnh tại (x0, y0)
+      |         ~~~~~~~~~~     ^~
+../H_lib/ILI9225/ILI9225.c(632): warning: implicit conversion loses integer precision: 'int' to 'char' [-Wimplicit-int-conversion]
+  632 |         draw_pixel(x0, y0, color);  // Vẽ điểm ảnh tại (x0, y0)
+      |         ~~~~~~~~~~ ^~
+../H_lib/ILI9225/ILI9225.c(650): warning: implicit conversion turns floating-point number into integer: 'double' to 'int' [-Wfloat-conversion]
+  650 |                 x[i] = centerX + radius * cos(angle);
+      |                      ~ ~~~~~~~~^~~~~~~~~~~~~~~~~~~~~
+../H_lib/ILI9225/ILI9225.c(651): warning: implicit conversion turns floating-point number into integer: 'double' to 'int' [-Wfloat-conversion]
+  651 |                 y[i] = centerY - radius * sin(angle);
+      |                      ~ ~~~~~~~~^~~~~~~~~~~~~~~~~~~~~
+../H_lib/ILI9225/ILI9225.c(656): warning: implicit conversion loses integer precision: 'int' to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+  656 |             drawLine(x[0], y[0], x[2], y[2], color);
+      |             ~~~~~~~~                         ^~~~~
+../H_lib/ILI9225/ILI9225.c(657): warning: implicit conversion loses integer precision: 'int' to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+  657 |             drawLine(x[2], y[2], x[4], y[4], color);
+      |             ~~~~~~~~                         ^~~~~
+../H_lib/ILI9225/ILI9225.c(658): warning: implicit conversion loses integer precision: 'int' to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+  658 |             drawLine(x[4], y[4], x[1], y[1], color);
+      |             ~~~~~~~~                         ^~~~~
+../H_lib/ILI9225/ILI9225.c(659): warning: implicit conversion loses integer precision: 'int' to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+  659 |             drawLine(x[1], y[1], x[3], y[3], color);
+      |             ~~~~~~~~                         ^~~~~
+../H_lib/ILI9225/ILI9225.c(660): warning: implicit conversion loses integer precision: 'int' to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+  660 |             drawLine(x[3], y[3], x[0], y[0], color);
+      |             ~~~~~~~~                         ^~~~~
+../H_lib/ILI9225/ILI9225.c(685): warning: implicit conversion turns floating-point number into integer: 'double' to 'int' [-Wfloat-conversion]
+  685 |         int x_new = cx + orbit_radius * cos(DEG_TO_RAD);
+      |             ~~~~~   ~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../H_lib/ILI9225/ILI9225.c(685): warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
+  685 |         int x_new = cx + orbit_radius * cos(DEG_TO_RAD);
+      |                                             ^~~~~~~~~~
+../H_lib/ILI9225/ILI9225.h(130): note: expanded from macro 'DEG_TO_RAD'
+  130 |         #define DEG_TO_RAD ((angle) * M_PI / 180.0)
+      |                              ^~~~~  ~
+../H_lib/ILI9225/ILI9225.c(686): warning: implicit conversion turns floating-point number into integer: 'double' to 'int' [-Wfloat-conversion]
+  686 |         int y_new = cy + orbit_radius * sin(DEG_TO_RAD);
+      |             ~~~~~   ~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../H_lib/ILI9225/ILI9225.c(686): warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
+  686 |         int y_new = cy + orbit_radius * sin(DEG_TO_RAD);
+      |                                             ^~~~~~~~~~
+../H_lib/ILI9225/ILI9225.h(130): note: expanded from macro 'DEG_TO_RAD'
+  130 |         #define DEG_TO_RAD ((angle) * M_PI / 180.0)
+      |                              ^~~~~  ~
+../H_lib/ILI9225/ILI9225.c(678): warning: function 'rotate_circle' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
+  678 | void rotate_circle(uint16_t cx, uint16_t cy, uint16_t radius, uint16_t orbit_radius, uint16_t color, uint16_t bg_color, uint16_t speed) {
+      |                                                                                                                                         ^
+../H_lib/ILI9225/ILI9225.c(401): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  401 |         line = FontLarge[font_index][12 - i];
+      |                ^~~~~~~~~~~~~~~~~~~~~
+../H_lib/ILI9225/ILI9225.c(401): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  401 |         line = FontLarge[font_index][12 - i];
+      |                ^~~~~~~~~
+../H_lib/ILI9225/ILI9225.c(449): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  449 |         line = FontLarge[font_index][12 - i];
+      |                ^~~~~~~~~~~~~~~~~~~~~
+../H_lib/ILI9225/ILI9225.c(449): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  449 |         line = FontLarge[font_index][12 - i];
+      |                ^~~~~~~~~
+../H_lib/ILI9225/ILI9225.c(457): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  457 |                 line = FontLarge[font_index][j];
+      |                        ^~~~~~~~~~~~~~~~~~~~~
+../H_lib/ILI9225/ILI9225.c(457): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  457 |                 line = FontLarge[font_index][j];
+      |                        ^~~~~~~~~
+../H_lib/ILI9225/ILI9225.c(490): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  490 |     while(str[counter] != '\0') {
+      |           ^~~
+../H_lib/ILI9225/ILI9225.c(494): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  494 |         draw_char(char_pos, y, str[counter], colour, size);
+      |                                ^~~
+../H_lib/ILI9225/ILI9225.c(509): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  509 |     while(str[counter] != '\0') {
+      |           ^~~
+../H_lib/ILI9225/ILI9225.c(511): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  511 |         draw_fast_char(x + (counter * 9), y, str[counter], colour, bg_colour);
+      |                                              ^~~
+../H_lib/ILI9225/ILI9225.c(525): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  525 |         int height = bmp[1];
+      |                      ^~~
+../H_lib/ILI9225/ILI9225.c(556): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  556 |                                         this_byte = bmp[(height * (j + 1)) - i + 1];
+      |                                                     ^~~
+../H_lib/ILI9225/ILI9225.c(558): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  558 |                                         this_byte = bmp[(width * (i)) + j + 1];
+      |                                                     ^~~
+../H_lib/ILI9225/ILI9225.c(650): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  650 |                 x[i] = centerX + radius * cos(angle);
+      |                 ^
+../H_lib/ILI9225/ILI9225.c(651): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  651 |                 y[i] = centerY - radius * sin(angle);
+      |                 ^
+../H_lib/ILI9225/ILI9225.c(656): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  656 |             drawLine(x[0], y[0], x[2], y[2], color);
+      |                                  ^
+../H_lib/ILI9225/ILI9225.c(656): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  656 |             drawLine(x[0], y[0], x[2], y[2], color);
+      |                                        ^
+../H_lib/ILI9225/ILI9225.c(657): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  657 |             drawLine(x[2], y[2], x[4], y[4], color);
+      |                      ^
+../H_lib/ILI9225/ILI9225.c(657): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  657 |             drawLine(x[2], y[2], x[4], y[4], color);
+      |                            ^
+../H_lib/ILI9225/ILI9225.c(657): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  657 |             drawLine(x[2], y[2], x[4], y[4], color);
+      |                                  ^
+../H_lib/ILI9225/ILI9225.c(657): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  657 |             drawLine(x[2], y[2], x[4], y[4], color);
+      |                                        ^
+../H_lib/ILI9225/ILI9225.c(658): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  658 |             drawLine(x[4], y[4], x[1], y[1], color);
+      |                      ^
+../H_lib/ILI9225/ILI9225.c(658): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  658 |             drawLine(x[4], y[4], x[1], y[1], color);
+      |                            ^
+../H_lib/ILI9225/ILI9225.c(658): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  658 |             drawLine(x[4], y[4], x[1], y[1], color);
+      |                                  ^
+../H_lib/ILI9225/ILI9225.c(658): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  658 |             drawLine(x[4], y[4], x[1], y[1], color);
+      |                                        ^
+../H_lib/ILI9225/ILI9225.c(659): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  659 |             drawLine(x[1], y[1], x[3], y[3], color);
+      |                      ^
+../H_lib/ILI9225/ILI9225.c(659): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  659 |             drawLine(x[1], y[1], x[3], y[3], color);
+      |                            ^
+../H_lib/ILI9225/ILI9225.c(659): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  659 |             drawLine(x[1], y[1], x[3], y[3], color);
+      |                                  ^
+../H_lib/ILI9225/ILI9225.c(659): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  659 |             drawLine(x[1], y[1], x[3], y[3], color);
+      |                                        ^
+../H_lib/ILI9225/ILI9225.c(660): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  660 |             drawLine(x[3], y[3], x[0], y[0], color);
+      |                      ^
+../H_lib/ILI9225/ILI9225.c(660): warning: unsafe buffer access [-Wunsafe-buffer-usage]
+  660 |             drawLine(x[3], y[3], x[0], y[0], color);
+      |                            ^
+95 warnings generated.
+compiling ILI9225.c...
+linking...
+Program Size: Code=5520 RO-data=424 RW-data=0 ZI-data=1632  
+".\Objects\game.axf" - 0 Error(s), 119 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.9.0.pack
+                ARM::CMSIS@5.9.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.6.0
+
+Package Vendor: Keil
+                https://www.keil.com/pack/Keil.STM32F4xx_DFP.2.17.1.pack
+                Keil::STM32F4xx_DFP@2.17.1
+                STMicroelectronics STM32F4 Series Device Support, Drivers and Examples
+   * Component: Startup Version: 2.6.3
+
+<h2>Collection of Component include folders:</h2>
+  ./RTE/_Target_1
+  C:/Users/Hoang/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include
+  C:/Users/Hoang/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.17.1/Drivers/CMSIS/Device/ST/STM32F4xx/Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE@5.6.0
+
+   * Component: Keil::Device:Startup@2.6.3
+      Source file:   MDK/Device/Source/ARM/STM32F4xx_OTP.s
+      Include file:  Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h
+      Source file:   MDK/Device/Source/ARM/STM32F411xx_OPT.s
+      Source file:   Drivers/CMSIS/Device/ST/STM32F4xx/Source/Templates/arm/startup_stm32f411xe.s
+      Source file:   Drivers/CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.c
+Build Time Elapsed:  00:00:02
+</pre>
+</body>
+</html>
